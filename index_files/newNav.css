@@ -1,0 +1,448 @@
+.iconfont {
+    font-size: 20px;
+    cursor: default;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    scrollbar-arrow-color: #f8f8f8;
+    /**/
+    /*三角箭头的颜色*/
+    scrollbar-face-color: #ebebed;
+    /**/
+    /*立体滚动条的颜色*/
+    scrollbar-3dlight-color: #f8f8f8;
+    /**/
+    /*立体滚动条亮边的颜色*/
+    scrollbar-highlight-color: #f8f8f8;
+    /**/
+    /*滚动条空白部分的颜色*/
+    scrollbar-shadow-color: #f8f8f8;
+    /**/
+    /*立体滚动条阴影的颜色*/
+    scrollbar-track-color: #f8f8f8;
+    /**/
+    /*立体滚动条背景颜色*/
+    scrollbar-base-color: #f8f8f8;
+    /**/
+    /*滚动条的基本颜色*/
+}
+
+/*滚动条整体样式*/
+.layui-table-body {
+    margin-bottom: 0 !important;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    /* -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2); */
+    background: #c8c8c8;
+}
+
+::-webkit-scrollbar-thumb:vertical:active,
+::-webkit-scrollbar-thumb:horizontal:active {
+    background: #757575;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: #757575;
+}
+
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    /* background: #F8F8F8; */
+}
+
+@-moz-document url-prefix(http://), url-prefix(https://) {
+    /* 滚动条颜色 */
+    scrollbar {
+        -moz-appearance: none !important;
+        background: #c8c8c8 !important;
+    }
+    /* 滚动条按钮颜色 */
+    thumb,
+    scrollbarbutton {
+        -moz-appearance: none !important;
+        background-color: #757575 !important;
+    }
+    /* 鼠标悬停时按钮颜色 */
+
+    thumb:hover,
+    scrollbarbutton:hover {
+        -moz-appearance: none !important;
+        background-color: #757575 !important;
+    }
+    /* 隐藏上下箭头 */
+    scrollbarbutton {
+        display: none !important;
+    }
+    /* 纵向滚动条宽度 */
+    scrollbar[orient="vertical"] {
+        width: 8px !important;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.edu-sideMenu::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.edu-sideMenu {
+    -ms-overflow-style: none;
+}
+
+.edu-sideMenu {
+    overflow: -moz-scrollbars-none;
+}
+
+.edu-aside {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    padding: 10px;
+    flex: auto;
+}
+
+.edu-sideMenu {
+    flex-grow: 1;
+    overflow: auto;
+    height: 46rem;
+}
+
+.edu-header {
+    height: 48px;
+    background-color: #fff;
+    line-height: 48px;
+}
+
+.edu-header.edu-navBar > div {
+    height: 100%;
+}
+
+.edu-logo {
+    display: flex;
+    align-items: center;
+    padding: 2px 16px;
+}
+
+.edu-logo > div {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.edu-main {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #eff3f6;
+}
+
+.edu-center {
+    height: calc(100% - 54px);
+    background: url("../images/indexBG.jpg") no-repeat;
+}
+
+.edu-center iframe {
+    height: 99%;
+    width: 100%;
+}
+
+.edu-center > div {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/*--- 侧边菜单 -----------------------------*/
+.accordion {
+    width: 100%;
+    max-width: 360px;
+    margin: 0px auto 20px;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.accordion .link {
+    cursor: pointer;
+    display: block;
+    color: #5f727f;
+    font-size: 1rem;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.accordion .link img {
+    margin: 0 0.5rem;
+}
+
+.accordion > li > .link {
+    padding-left: 2.25rem;
+}
+
+.submenu .link {
+    padding-left: 1rem;
+}
+
+.link.link-disable {
+    color: #c8c8c8;
+    cursor: not-allowed;
+}
+
+.accordion li:last-child .link {
+    border-bottom: 0;
+}
+
+.accordion li i {
+    position: absolute;
+    top: 0px;
+    left: 0.7rem;
+    font-size: 1.05rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.accordion li i.icon-xiala {
+    right: 0.75rem;
+    left: auto;
+    font-size: 16px;
+}
+
+.accordion > li.open > .link {
+    color: #3b82ff;
+    background-color: #f3f5f8;
+    position: relative;
+}
+
+.accordion > .open > ul > li:first-child > div:first-child {
+    border-top: 1px solid #d5deda;
+}
+
+.accordion li.open > div > i.icon-xiala {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/*--- Submenu -----------------------------*/
+.submenu {
+    display: none;
+    background: #f4f6f7;
+    font-size: 14px;
+}
+
+.submenu a {
+    font-size: 0.875rem;
+    display: block;
+    text-decoration: none;
+    color: #5f727f;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 2rem;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    border-left: 5px solid transparent;
+}
+
+.submenu > li:hover > div .dot {
+    background-color: #3b82ff;
+    width: 1.25rem;
+    height: 4px;
+    border-radius: 9.5px;
+    -webkit-transition: all 0.2s;
+}
+
+.submenu .link .dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #5f727f;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 0.8rem;
+}
+
+.submenu a:hover {
+    background: linear-gradient(
+            90deg,
+            rgba(59, 130, 255, 0.6) 0%,
+            rgba(59, 130, 255, 0) 100%
+    );
+    border-left-color: #3b82ff;
+    color: #3b82ff;
+    position: relative;
+}
+
+.submenu a.active {
+    background-color: rgba(75, 102, 233, 0.16);
+    color: #3b82ff;
+    position: relative;
+}
+
+.submenu a.active::after {
+    content: "";
+    background-image: url(../../images/menuicon.png);
+    color: #3b82ff;
+    width: 12px;
+    height: 10px;
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    -webkit-transition: all 0.2s;
+}
+
+/*********************************** 侧边栏 *****************************************/
+.lsm-expand-btn {
+    position: absolute;
+    height: 60px;
+    left: 208px;
+    top: 50%;
+    margin-top: -35px;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    box-shadow: 2px 2px 2px rgba(95, 114, 127, 0.3);
+}
+
+.lsm-expand-btn .lsm-mini-btn i {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    bottom: 15px;
+    left: -15px;
+    transform: rotate(-90deg);
+    transition: all 0.2s ease-in-out;
+    background-image: url(../images/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+}
+
+.edu-bg-balck .lsm-expand-btn {
+    background-color: #454959;
+}
+
+.edu-bg-balck .lsm-expand-btn i {
+    background-image: url(../images/arrow_dis.png);
+}
+
+.edu-aside:hover .lsm-expand-btn {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lsm-mini-btn {
+    height: 60px;
+    width: 30px;
+    position: relative;
+}
+
+.lsm-mini-btn input[type="checkbox"] {
+    display: none;
+}
+
+.lsm-mini-btn input:checked + i {
+    transform: rotate(90deg) !important;
+}
+
+.fold-submenu {
+    position: absolute;
+    left: 61px;
+    top: 0;
+    width: 208px;
+    z-index: 999999;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e4e4f0;
+    border-top: none;
+}
+
+.fold-submenu .open,
+.fold-submenu .open .submenu,
+.submenu.fold-submenu.open > .submenu {
+    border-radius: 0 0 3px 3px;
+}
+
+.fold-submenu .dot {
+    display: none !important;
+}
+
+.fold-submenu .icon-xiala {
+    display: block !important;
+}
+
+.fold-submenu > li:hover {
+    background-color: #f3f5f8 !important;
+    border-left: 5px solid #3b82ff !important;
+}
+
+.fold-submenu > li:hover div {
+    color: #3b82ff !important;
+}
+
+.extend-child {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #e4e4f0;
+}
+
+.fold-submenu .extend-child a:hover {
+    background: none;
+    background-color: #f3f5f8 !important;
+    color: #3b82ff !important;
+    border-left: none !important;
+}
+
+.fold-submenu .extend-child a:hover::after {
+    content: "";
+    background-image: url(../../images/menuicon.png);
+    color: #3b82ff;
+    width: 12px;
+    height: 10px;
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    -webkit-transition: all 0.2s;
+}
+
+.fold-submenu .extend-child a.active {
+    background-color: #f3f5f8 !important;
+    border-left: none !important;
+}

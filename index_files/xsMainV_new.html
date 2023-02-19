@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.hltz.net/hlxy_jsxsd/framework/xsMainV_new.htmlx?t1=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./jsxsPerson.css">
+	<link rel="stylesheet" type="text/css" href="./layui.css">
+	<link rel="stylesheet" href="./aero.css">
+
+	<title>学生端-个人中心</title>
+
+<style type="text/css">
+	.hint{
+		width: 200px;
+		height: 200px;
+		display: none;
+		background: #757575;
+		position: absolute;
+		top: 40px;
+		padding: 15px;
+		color: #fff;
+		z-index: 10;
+	}
+	.ydspan {
+		 display: inline-flex;
+		 align-items: center;
+		 font-family: MicrosoftYaHei;
+		 font-size: 0.875rem;
+		 color: #979797;
+		 letter-spacing: 0;
+	}
+</style><link id="layuicss-laydate" rel="stylesheet" href="./laydate.css" media="all"><link id="layuicss-layer" rel="stylesheet" href="./layer.css" media="all"><link id="layuicss-skincodecss" rel="stylesheet" href="./code.css" media="all"><style type="text/css">.ui_title_icon,.ui_content,.ui_dialog_icon,.ui_btns span{display:inline-block;*zoom:1;*display:inline}.ui_dialog{visibility:hidden;text-align:left;position:absolute;top:0;left:-99999em;_overflow:hidden}.ui_dialog table{border:0;margin:0;border-collapse:collapse}.ui_dialog td{padding:0}.ui_title_icon{vertical-align:middle}.ui_title_text{overflow:hidden;cursor:default;-moz-user-select:none;user-select:none}.ui_close{display:block;position:absolute;outline:none}.ui_content_wrap{text-align:center}.ui_content{margin:10px;text-align:left}.ui_dialog_icon{vertical-align:middle}.ui_content.ui_iframe{margin:0;*padding:0;display:block;height:100%}.ui_iframe iframe{visibility:hidden;width:100%;height:100%;border:none;overflow:auto}.ui_bottom{position:relative}.ui_resize{position:absolute;right:0;bottom:0;z-index:1;cursor:nw-resize;_font-size:0}.ui_btns{text-align:right;white-space:nowrap}.ui_btns span{margin:5px 10px}.ui_btns button{cursor:pointer}.ui_overlay{visibility:hidden;position:absolute;top:0;left:0;width:100%;height:100%;filter:alpha(opacity=0);opacity:0;_overflow:hidden}.ui_overlay div{height:100%}* html .ui_ie6_select_mask{width:99999em;height:99999em;position:absolute;top:0;left:0;z-index:-1}.ui_move .ui_title_text{cursor:move}html>body .ui_dialog_wrap.ui_fixed .ui_dialog{position:fixed}* html .ui_dialog_wrap.ui_fixed .ui_dialog{fixed:true}* html.ui_ie6_fixed{background:url(*) fixed}* html.ui_ie6_fixed body{height:100%}* html .ui_dialog_wrap.ui_fixed{width:100%;height:100%;position:absolute;left:expression(documentElement.scrollLeft+documentElement.clientWidth-this.offsetWidth);top:expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight)}html.ui_page_lock>body{overflow:hidden}* html.ui_page_lock{overflow:hidden}* html.ui_page_lock select,* html.ui_page_lock .ui_ie6_select_mask{visibility:hidden}html.ui_page_lock>body .ui_dialog_wrap.ui_lock{width:100%;height:100%;position:fixed;top:0;left:0}* html body{margin:0}@media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0){.ui_content_wrap,.r0d0,.r0d2,.r2d2,.r2d0{display:block}}</style></head>
+
+<body>
+
+<div class="person">
+	<!-- 快捷入口 -->
+	<div class="person-top">
+		<ul>
+			<li><img src="./kL.png" alt=""></li>
+			<li><img src="./kR.png" alt=""></li>
+			
+				<li onclick="kjcdShow(this)" data-name="学期理论课表" data-code="NEW_XSD_PYGL_WDKB" data-yjcode="NEW_XSD_PYGL" data-sjcode="NEW_XSD_PYGL_WDKB_XQLLKB" data-url="/xskb/xskb_list.do" style="background-image: url(&quot;../assets_v1/images/icon1.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng1" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							学期理论课表
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="课程成绩查询" data-code="NEW_XSD_XJCJ_WDCJ" data-yjcode="NEW_XSD_XJCJ" data-sjcode="NEW_XSD_XJCJ_WDCJ_KCCJCX" data-url="/kscj/cjcx_frm" style="background-image: url(&quot;../assets_v1/images/icon2.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng2" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							课程成绩查询
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="学生选课中心" data-code="NEW_XSD_PYGL_XKGL" data-yjcode="NEW_XSD_PYGL" data-sjcode="NEW_XSD_PYGL_XKGL_NXSXKZX" data-url="/xsxk/xklc_list" style="background-image: url(&quot;../assets_v1/images/icon3.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng3" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							学生选课中心
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="考试安排查询" data-code="NEW_XSD_KSBM_WDKS" data-yjcode="NEW_XSD_KSBM" data-sjcode="NEW_XSD_KSBM_WDKS_KSAPCX" data-url="/xsks/xsksap_query" style="background-image: url(&quot;../assets_v1/images/icon4.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng4" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							考试安排查询
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="学生评价" data-code="NEW_XSD_JXPJ_JXPJ" data-yjcode="NEW_XSD_JXPJ" data-sjcode="NEW_XSD_JXPJ_JXPJ_XSPJ" data-url="/xspj/xspj_find.do" style="background-image: url(&quot;../assets_v1/images/icon5.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng5" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							学生评价
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="缓考申请" data-code="NEW_XSD_KSBM_WDSQ" data-yjcode="NEW_XSD_KSBM" data-sjcode="NEW_XSD_KSBM_WDSQ_HKSQ" data-url="/kscj/hksq_query" style="background-image: url(&quot;../assets_v1/images/icon6.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng6" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							缓考申请
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="社会考试报名" data-code="NEW_XSD_KSBM_CJGL" data-yjcode="NEW_XSD_KSBM" data-sjcode="NEW_XSD_KSBM_CJGL_SHKSBM" data-url="/xsdjks/xsdjks_list" style="background-image: url(&quot;../assets_v1/images/icon1.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng7" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							社会考试报名
+					</span>
+				</li>
+			
+				<li onclick="kjcdShow(this)" data-name="培养方案明细" data-code="NEW_XSD_PYGL_PYFA" data-yjcode="NEW_XSD_PYGL" data-sjcode="NEW_XSD_PYGL_PYFAMX" data-url="/pyfa/topyfamx" style="background-image: url(&quot;../assets_v1/images/icon2.png&quot;);">
+                    <span>
+                            <i class="iconfont icongongneng8" alt=""></i>
+                    </span>
+					<span sytle="font-weight: bold;">
+							培养方案明细
+					</span>
+				</li>
+			
+			<li style="display: none"><span><i class="icon" alt=""></i></span><span></span></li>
+		</ul>
+	</div>
+	<div class="person-content">
+		<!-- 课表 -->
+		<div class="content-left">
+			<div class="layui-tab">
+				<div class="layui-tab-title">
+					<ul id="kbjcmsid_ul">
+					
+						 <li class="layui-this" data-value="CA480D411F374B5C90F798FD444D8833" name="kbjcmsid" onclick="se(this)">默认节次模式<span class="msg">20</span></li>
+						
+					
+					</ul>
+
+						<div>
+							<span class="search">
+							  <img src="./date.png" alt="">
+							  <span style="width:9rem;height:100%">
+								  <select name="">
+									  <option value="">2022-2023-2</option>
+								  </select>
+							  </span>
+							  <img src="./arrowD.png" alt="">
+							</span>
+							<span class="search">
+							  <img src="./date.png" alt="">
+								<span style="width:9rem;height:100%">
+								  <select name="week" id="week" onchange="se(null)">
+									  
+									  <option value="">---请选择---</option>
+									  <option value="all">全部</option>
+									
+									  
+									  
+								  </select>
+								</span>
+								<img src="./arrowD.png" alt="">
+							</span>
+					    </div>
+				</div>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						<div class="time-table" id="kbLoading">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+     .time-color {
+        height: 2rem;
+        width: 100%;
+    }
+     .time-color ul {
+        display: flex;
+        align-items: center;
+        height: 50%;
+        padding-left: 1rem;
+    }
+     .time-color ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: MicrosoftYaHei;
+        font-size: 0.75rem;
+        color: #5f727f;
+        letter-spacing: 0;
+        line-height: 12px;
+        margin-right: 2rem;
+    }
+    .time-color ul li span {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 10px;
+        margin-right: 0.25rem;
+    }
+</style>
+<div class="time-color">
+    <ul>
+        
+            <li> <span style=" background-color: rgb(251, 194, 194);"></span>必修 </li>
+        
+            <li> <span style=" background-color: rgb(205, 221, 252);"></span>限选 </li>
+        
+            <li> <span style=" background-color: rgb(190, 237, 242);"></span>任选 </li>
+        
+            <li> <span style=" background-color: rgb(252, 217, 181);"></span>公选 </li>
+        
+            <li> <span style=" background-color: rgb(200, 198, 246);"></span>专业课 </li>
+        
+            <li> <span style=" background-color: rgb(247, 179, 255);"></span>公共课 </li>
+        
+            <li> <span style=" background-color: rgb(247, 247, 248);"></span>其它 </li>
+        
+    </ul>
+
+</div>
+<table border="0" cellspacing="0" cellpadding="0">
+    <thead>
+    <tr align="center">
+        <th style="width: 10%;">周/节次</th>
+        <th style="width: 12%;">星期一</th>
+        <th style="width: 12%;">星期二</th>
+        <th style="width: 12%;">星期三</th>
+        <th style="width: 12%;">星期四</th>
+        <th style="width: 12%;">星期五</th>
+        <th style="width: 12%;">星期六</th>
+        <th style="width: 12%;">星期日</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr align="center">
+            <td>第一大节
+                
+                </td>
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(190, 237, 242);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>Python程序设计</p><div class="tch-name"><span>学分：4</span><span>01~02节</span></div><div><span><img src="./item1.png">8-504</span><span><img src="./item3.png">第11-18周 星期一</span></div><p>Python程序设计</p><div class="tch-name"><span>学分：4</span><span>01~02节</span></div><div><span><img src="./item1.png">8-504</span><span><img src="./item3.png">第3-10周 星期一</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期一</span></div></div></span><div class="item-box" style="display: none;"><p>Python程序设计</p><div class="tch-name"><span>学分：4</span><span>01~02节</span></div><div><span><img src="./item1.png">8-504</span><span><img src="./item3.png">第11-18周 星期一</span></div><p>Python程序设计</p><div class="tch-name"><span>学分：4</span><span>01~02节</span></div><div><span><img src="./item1.png">8-504</span><span><img src="./item3.png">第3-10周 星期一</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期一</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>操作系统</p><div class="tch-name"><span>学分：3</span><span>01~02节</span></div><div><span><img src="./item1.png">4-306</span><span><img src="./item3.png">第3-16周 星期二</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期二</span></div></div></span><div class="item-box" style="display: none;"><p>操作系统</p><div class="tch-name"><span>学分：3</span><span>01~02节</span></div><div><span><img src="./item1.png">4-306</span><span><img src="./item3.png">第3-16周 星期二</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期二</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p>教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期三</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>软件项目管理</p><div class="tch-name"><span>学分：2</span><span>01~02节</span></div><div><span><img src="./item1.png">6-302</span><span><img src="./item3.png">第3-18周 星期四</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期四</span></div></div></span><div class="item-box" style="display: none;"><p>软件项目管理</p><div class="tch-name"><span>学分：2</span><span>01~02节</span></div><div><span><img src="./item1.png">6-302</span><span><img src="./item3.png">第3-18周 星期四</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期四</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p>教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期五</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+        </tr>
+    
+        <tr align="center">
+            <td>第二大节
+                
+                </td>
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(205, 221, 252);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>创业实践</p><div class="tch-name"><span>学分：0.5</span><span>03~04节</span></div><div><span><img src="./item1.png">Z-505</span><span><img src="./item3.png">第9-16周 星期一</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期一</span></div></div></span><div class="item-box" style="display: none;"><p>创业实践</p><div class="tch-name"><span>学分：0.5</span><span>03~04节</span></div><div><span><img src="./item1.png">Z-505</span><span><img src="./item3.png">第9-16周 星期一</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期一</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>计算机组成原理实验</p><div class="tch-name"><span>学分：1</span><span>03~04节</span></div><div><span><img src="./item1.png">Z-803</span><span><img src="./item3.png">第13-17周 星期二</span></div><p>计算机组成原理</p><div class="tch-name"><span>学分：3</span><span>03~04节</span></div><div><span><img src="./item1.png">6-206</span><span><img src="./item3.png">第3-9周 星期二</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期二</span></div></div></span><div class="item-box" style="display: none;"><p>计算机组成原理实验</p><div class="tch-name"><span>学分：1</span><span>03~04节</span></div><div><span><img src="./item1.png">Z-803</span><span><img src="./item3.png">第13-17周 星期二</span></div><p>计算机组成原理</p><div class="tch-name"><span>学分：3</span><span>03~04节</span></div><div><span><img src="./item1.png">6-206</span><span><img src="./item3.png">第3-9周 星期二</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期二</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p title="">Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期三</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>计算机组成原理实验</p><div class="tch-name"><span>学分：1</span><span>03~04节</span></div><div><span><img src="./item1.png">Z-803</span><span><img src="./item3.png">第13-17周 星期四</span></div><p>操作系统</p><div class="tch-name"><span>学分：3</span><span>03~04节</span></div><div><span><img src="./item1.png">4-306</span><span><img src="./item3.png">第3-12周 星期四</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期四</span></div></div></span><div class="item-box" style="display: none;"><p>计算机组成原理实验</p><div class="tch-name"><span>学分：1</span><span>03~04节</span></div><div><span><img src="./item1.png">Z-803</span><span><img src="./item3.png">第13-17周 星期四</span></div><p>操作系统</p><div class="tch-name"><span>学分：3</span><span>03~04节</span></div><div><span><img src="./item1.png">4-306</span><span><img src="./item3.png">第3-12周 星期四</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期四</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">Java软...</p><p title="">教师：蔡其宇</p><span class="text">01~02~03~04小节 第1-2周</span></span><div class="item-box" style="display: none;"><p>大学生就业指导</p><div class="tch-name"><span>学分：1</span><span>03~04节</span></div><div><span><img src="./item1.png">3-209</span><span><img src="./item3.png">第11-18周 星期五</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期五</span></div></div></span><div class="item-box" style="display: none;"><p>大学生就业指导</p><div class="tch-name"><span>学分：1</span><span>03~04节</span></div><div><span><img src="./item1.png">3-209</span><span><img src="./item3.png">第11-18周 星期五</span></div><p>Java软件开发实战</p><div class="tch-name"><span>学分：2</span><span>01~02~03~04节</span></div><div><span><img src="./item1.png">8-501</span><span><img src="./item3.png">第1-2周 星期五</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+        </tr>
+    
+        <tr align="center">
+            <td>第三大节
+                
+                </td>
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(205, 221, 252);"><p>中外哲学十...</p><p title="">教师：李琳琳</p><span class="text">05~06小节 第1-15周</span></span><div class="item-box" style="display: none;"><p>中外哲学十五讲</p><div class="tch-name"><span>学分：2</span><span>05~06节</span></div><div><span><img src="./item1.png">6-203</span><span><img src="./item3.png">第1-15周 星期二</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(205, 221, 252);"><p>创业基础</p><p>教师：王冠楠</p><span class="text">05~06小节 第9-16周</span></span><div class="item-box" style="display: none;"><p>创业基础</p><div class="tch-name"><span>学分：1</span><span>05~06节</span></div><div><span><img src="./item1.png">5-204</span><span><img src="./item3.png">第9-16周 星期三</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(190, 237, 242);"><p>编译原理</p><p>教师：湛子谊</p><span class="text">05~06~07~08小节 第3-10周</span></span><div class="item-box" style="display: none;"><p>编译原理</p><div class="tch-name"><span>学分：2</span><span>05~06~07~08节</span></div><div><span><img src="./item1.png">4-402</span><span><img src="./item3.png">第3-10周 星期五</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+        </tr>
+    
+        <tr align="center">
+            <td>第四大节
+                
+                </td>
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(251, 194, 194);"><p title="">计算机组成...</p><p title="">教师：高宇宁</p><span class="text">07~08小节 第1-17周</span></span><div class="item-box" style="display: none;"><p>计算机组成原理</p><div class="tch-name"><span>学分：3</span><span>07~08节</span></div><div><span><img src="./item1.png">6-307</span><span><img src="./item3.png">第1-17周 星期一</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(190, 237, 242);"><p>Pytho...</p><p>教师：林睿翀</p><span class="text">07~08小节 第3-18周</span></span><div class="item-box" style="display: none;"><p>Python程序设计</p><div class="tch-name"><span>学分：4</span><span>07~08节</span></div><div><span><img src="./item1.png">8-504</span><span><img src="./item3.png">第3-18周 星期四</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    <span onmouseover="kbtc(this)" onmouseout="kbot(this)" class="box" style="background-color: rgb(190, 237, 242);"><p>编译原理</p><p title="">教师：湛子谊</p><span class="text">05~06~07~08小节 第3-10周</span></span><div class="item-box" style="display: none;"><p>编译原理</p><div class="tch-name"><span>学分：2</span><span>05~06~07~08节</span></div><div><span><img src="./item1.png">4-402</span><span><img src="./item3.png">第3-10周 星期五</span></div></div>
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+        </tr>
+    
+        <tr align="center">
+            <td>第五大节
+                
+                </td>
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+        </tr>
+    
+        <tr align="center">
+            <td>第六大节
+                
+                </td>
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+                <td align="left">
+                        
+                    
+
+                </td>
+
+            
+        </tr>
+    
+    <tr height="30">
+        <td align="center">备注&nbsp;&nbsp;</td>
+        <td colspan="7" style="color: red;">&nbsp;公益劳动     1-8周;软件测试  罗谦  3-18周;社会实践     1-8周;</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+<style>
+    #tooltip{position:absolute;z-index:9999;display:none;padding:4px 8px;border:1px solid rgba(255,255,255,0.25);border-radius:3px;background-color:#333333;filter:alpha(Opacity=80); opacity: 0.8;color:#fff;text-align:left;font-size:16px;}
+    #tooltip:before{position:absolute;top:-6px;left:15px;width:0;height:0;border:6px dashed #333333;border-top:0;color:#fff;content:' ';line-height:0;border-bottom-style:solid;border-left-color:transparent;border-right-color:transparent;}
+
+</style>
+<script type="text/javascript">
+    
+    
+    $("#li_showWeek").html("<span class=\"main_text main_color\">第周</span>/20周");
+    
+    
+
+    $(function(){
+        var x=-15;//title显示层x轴偏移量
+        var y=30;//title显示层y轴偏移量
+        $("p").mouseover(function(e){//
+            // 对所有td元素增加鼠标移入移出事件 //edit by wangwei 2018.10.31 此处修改为对所有P标签增加移入移出事件
+            this.myTitle=this.title;
+            this.title="";
+            if(this.myTitle != ""){
+                var tooltip="<div id='tooltip'>"+this.myTitle+"</div>"; //创建DIV元素
+                $("body").append(tooltip); //追加到文档中
+                $("#tooltip").css({"top": (e.pageY+y) + "px","left": (e.pageX+x) + "px"}).show();     //设置X Y坐标， 并且显示
+            }
+        }).mouseout(function(){
+            this.title=this.myTitle;
+            $("#tooltip").remove(); //移除
+        }).mousemove(function(e){
+            $("#tooltip").css({"top": (e.pageY+y) + "px","left": (e.pageX+x) + "px"});
+        })
+    })
+
+    // 课表弹窗
+    function kbtc(t){
+        t.nextSibling.style.display = "flex";
+    }
+    function kbot(t) {
+        t.nextSibling.style.display = "none";
+    }
+
+</script>
+</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="content-right" style="">
+			<!-- 通知公告 -->
+			<div class="box-top">
+				<div class="box-title">
+					<span>通知公告<span class="msg">0</span></span>
+					<span class="more" onclick="kjcdShow(this)" data-name="已收公告" data-code="PTWH" data-url="/ggly/ysgg_query">更多</span>
+				</div>
+				<div class="box-content">
+					<ul class="noReadMsg">
+						
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="box-top">
+				<div class="box-title">
+					<span>审核通知<span class="msg">0</span></span>
+				</div>
+				<div class="box-content">
+					<ul class="noReadMsg">
+						
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- 周历 -->
+			<div class="box-bottom">
+				<div class="box-title">
+					<span style="width: 15rem;">教学进程&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<ul>
+						<li id="zlnycn">2023年02月</li>
+						<input type="hidden" id="zlny" value="2023-02">
+						<li onclick="loadzltable_n(&#39;iz&#39;)"><img src="./arrowL.png" alt=""></li>
+						<li onclick="loadzltable_n(&#39;iy&#39;)"><img src="./arrowR.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="box-content" id="zltable">
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	.hint {
+		width: 190px;
+		height: 200px;
+		display: none;
+		background: #757575;
+		position: absolute;
+		top: 35px;
+		padding: 15px;
+		color: #fff;
+		z-index: 10;
+		/*border-radius: 2px;*/
+	}
+
+	.iconfont.icon-warning > .hint {
+		left: -43px;
+		top: 25px;
+		height: auto;
+		width: 100px;
+	}
+
+	.hint > p {
+		color: #fff !important;
+		font-size: 12px;
+		word-break: break-all;
+		white-space: pre-wrap
+	}
+</style>
+<div class="time-week">
+	
+	
+		<ul>
+			<li>&nbsp;</li>
+			<li>一</li>
+			<li>二</li>
+			<li>三</li>
+			<li>四</li>
+			<li>五</li>
+			<li>六</li>
+			<li>日</li>
+		</ul>
+	
+	
+</div>
+<div class="time-table">
+	<div class="table">
+		<table>
+			<tbody>
+			
+				<tr>
+					<td>第一周</td>
+					
+					
+						
+							<td><span class="                        ">20</span></td>
+						
+
+					
+						
+							<td><span class="                        ">21</span></td>
+						
+
+					
+						
+							<td><span class="                        ">22</span></td>
+						
+
+					
+						
+							<td><span class="                        ">23</span></td>
+						
+
+					
+						
+							<td><span class="                        ">24</span></td>
+						
+
+					
+						
+							<td><span class="                        ">25</span></td>
+						
+
+					
+						
+							<td><span class="                        ">26</span></td>
+						
+
+					
+						
+
+					
+						
+
+					
+				</tr>
+			
+				<tr>
+					<td>第二周</td>
+					
+					
+						
+
+					
+						
+
+					
+						
+
+					
+						
+
+					
+						
+
+					
+						
+
+					
+						
+
+					
+						
+							<td><span class="                        ">27</span></td>
+						
+
+					
+						
+							<td><span class="                        ">28</span></td>
+						
+
+					
+				</tr>
+			
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="time-color">
+	<ul>
+		<li><span class="person-badge person-bg-yellow"></span>成绩录入</li>
+		<li><span class="person-badge person-bg-green"></span>学生评教</li>
+		<li><span class="person-badge person-bg-blue"></span>学生选课</li>
+	</ul><ul>
+	<li><span class="person-badge person-bg-pink"></span>补考报名</li>
+	<li><span class="person-badge person-bg-purple"></span>重修报名</li>
+	<li><span class="person-badge person-bg-lightblue"></span>学生报到</li>
+	<li><span class="person-badge person-bg-brown"></span>学生注册</li>
+</ul>
+</div>
+
+<script>
+
+
+
+	(function(){
+		overlayInfo()
+	})()
+	function overlayInfo(){
+		$(".overlay-yellow").hover(function(){
+			$(this).find(".hint").show()
+		},function(){
+			$(this).find(".hint").hide()
+		});
+
+		$(".overlay-green").hover(function(){
+			$(this).find(".hint").show()
+		},function(){
+			$(this).find(".hint").hide()
+		});
+
+		$(".overlay-pink").hover(function(){
+			$(this).find(".hint").show()
+		},function(){
+			$(this).find(".hint").hide()
+		});
+
+		$(".overlay-blue").hover(function(){
+			$(this).find(".hint").show()
+		},function(){
+			$(this).find(".hint").hide()
+		});
+
+		$(".overlay-silver").hover(function(){
+			$(this).find(".hint").show()
+		},function(){
+			$(this).find(".hint").hide()
+		});
+
+
+	}
+</script></div>
+			</div>
+
+			<!-- 我的课程 -->
+			<div class="box-center">
+				<div class="box-title">
+					<span>我的课程</span>
+
+				</div>
+				<div class="box-content">
+					<table>
+						<thead>
+						<tr>
+							<th><span>课程名称</span></th>
+							<th><span>上课老师</span></th>
+						</tr>
+						</thead>
+						<tbody>
+						
+							<tr>
+								<td>
+									<span>创业基础</span>
+								</td>
+								<td>
+									<span>王冠楠</span>
+								</td>
+								<td>
+								  <span>
+								  </span>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+									<span>大学生就业指导</span>
+								</td>
+								<td>
+									<span>李海清</span>
+								</td>
+								<td>
+								  <span>
+								  </span>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+									<span>软件项目管理</span>
+								</td>
+								<td>
+									<span>蒋苇</span>
+								</td>
+								<td>
+								  <span>
+								  </span>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+									<span>计算机组成原理</span>
+								</td>
+								<td>
+									<span>高宇宁</span>
+								</td>
+								<td>
+								  <span>
+								  </span>
+								</td>
+							</tr>
+						
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="./jquery.min.js.下载"></script>
+<script type="text/javascript" src="./layui.all.js.下载"></script>
+<script type="text/javascript" src="./jsxsPerson.js.下载"></script>
+<script type="text/javascript" src="./artDialog.js.下载"></script>
+<script>
+
+	function kjcdShow(t) {
+		parent.checkPerson(t,$(t).data("name"),$(t).data("code"),$(t).data(  	"sjcode"),$(t).data("url"));
+		parent.ldcd($(t).data("sjcode"));
+	}
+
+	function addkjcd(){
+		var sUrl = "/hlxy_jsxsd/kjcd.do?method=findMenuAll&userId=E835ECB182DA2A1FE0530100007F9EE3";
+		window.showModalDialog(sUrl, window, "height=700,width=600,toolbar=no,menubar=no,location=no, status=no",350,200);
+	}
+
+	function gotoTzgg(ggid) {
+		artDialog({
+			id: ggid,
+			title: "通知公告",
+			fixed: true,
+			url: "/hlxy_jsxsd/framework/main_index_tzgg.htmlx?id="+ggid,
+			lock: true,
+			width: $(window).width() - 200,
+			height: $(window).height() - 100
+		}, null, null, function(){
+			loadingTzgg();
+		});
+	}
+	function gotoTzxx(ggid) {
+        artDialog({
+            id: ggid,
+            title: "审核通知",
+            fixed: true,
+            url: "/hlxy_jsxsd/framework/main_index_tzxx.jsp?id=" + ggid,
+            lock: true,
+            width: $(window).width() - 1000,
+            height: $(window).height() - 500
+        }, null, null, function () {
+            loadingTzxx();
+        });
+    }
+
+
+	/**
+	 操作类型(czlx)：
+	 1.花名册
+	 2.录入成绩
+
+	 是否转入成绩录入系统(sfzr) 获取的是cj0703.cj0703id
+	 */
+	function kcOper(jx0404id,czlx,cj0703id){
+		var operUrl = "";
+		var operTitle = " ";
+		if("1" == czlx){
+			operUrl = "/hlxy_jsxsd/framework/jsMain_hmc.htmlx?jx0404id="+jx0404id;
+			operTitle = "花名册";
+		}else if ("2" == czlx){
+			operUrl =  "/hlxy_jsxsd/cjlr/comeInCjlr.do?cj0703id="+cj0703id;
+			operTitle = "成绩录入";
+			if("0" == cj0703id){
+				alert("当前不在成绩录入时间范围内或成绩已送审！");
+				return;
+			}
+		}
+		top.artDialog({
+			id: jx0404id,
+			title: operTitle,
+			fixed: true,
+			url: operUrl,
+			lock: true,
+			width: $(window).width() - 50,
+			height: $(window).height() - 80
+		});
+
+	}
+
+
+	se(null)
+	function se(t){
+		var rq=document.getElementById("week").value;
+		var kbjcmss = document.getElementsByName("kbjcmsid");
+		var kbjcmsid="";
+		for (var i =0;i<kbjcmss.length;i++){
+			if(kbjcmss[i].className == "layui-this"){
+				kbjcmsid = $(kbjcmss[i]).data("value");
+			}
+		}
+		if(t!=null){
+			kbjcmsid = $(t).data("value");
+		}
+		
+		$("#kbLoading").load("/hlxy_jsxsd/framework/mainV_index_loadkb.htmlx?rq="+rq+"&sjmsValue="+kbjcmsid+"&xnxqid="+"2022-2023-2");
+		
+	}
+
+	(function(){
+		overlayInfo();
+		$("#zltable").load("/hlxy_jsxsd/framework/mainv_index_lzltable.htmlx?ny="+$("#zlny").val());
+		if("1"=="0"){
+			alert("请进行实习任务的签到并发布日报！");
+		}
+	})()
+	function overlayInfo(){
+		$(".box-content .time-table .table table td").hover(function(){
+			$(this).find(".hint").show()
+		},function(){
+			$(this).find(".hint").hide()
+		});
+	}
+
+	var ijiao=0;
+	function loadzltable_n(fx) {
+		debugger
+		if (fx=="iz"){
+			ijiao--;
+			if(ijiao<0){
+				ijiao=0;
+			}
+		} else{
+			ijiao++;
+			if(ijiao>0){
+				ijiao=0;
+			}
+		}
+		var ii=0;
+		
+		$("#zltable").load("/hlxy_jsxsd/framework/mainv_index_lzltable.htmlx?ny="+$("#zlny").val());
+	}
+
+</script>
+
+<div class="ui_dialog_wrap" id="" style="z-index: 1000002;"><div class="ui_dialog" style=""><table class=""><tbody><tr><td class="ui_border r0d0"></td><td class="ui_border r0d1"></td><td class="ui_border r0d2"></td></tr><tr><td class="ui_border r1d0"></td><td class="r1d1"><table class="ui_dialog_main"><tbody><tr><td class="ui_title_wrap"><div class="ui_title"><div class="ui_title_text"></div><a class="ui_close" href="javascript:void(0)">×</a></div></td></tr><tr><td class="ui_content_wrap" style="width: auto; height: auto;"><div class="ui_content " id=""></div></td></tr><tr><td class="ui_bottom_wrap"><div class="ui_bottom"><div class="ui_btns"></div><div class="ui_resize"></div></div></td></tr></tbody></table></td><td class="ui_border r1d2"></td></tr><tr><td class="ui_border r2d0"></td><td class="ui_border r2d1"></td><td class="ui_border r2d2"></td></tr></tbody></table></div></div></body></html>
